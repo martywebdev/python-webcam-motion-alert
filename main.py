@@ -4,7 +4,7 @@ import shutil
 
 import cv2
 import time
-from emailing import send_email
+from emailing import send_email, send_email_solution
 
 video = cv2.VideoCapture(0)
 time.sleep(1)
@@ -57,7 +57,7 @@ while True:
 
     if status_list[0] == 1 and status_list[1] == 0 and image_with_object is not None and os.path.exists(image_with_object):
 
-        send_email(image_with_object)
+        send_email_solution(image_with_object)
 
         # save the sent image to another folder
         sent_folder = "sent"
