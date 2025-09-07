@@ -11,6 +11,7 @@ import smtplib
 load_dotenv()
 
 def send_email_solution(image_path):
+    print('email started')
     sender_email = os.getenv("EMAIL")
     sender_password = os.getenv("EMAIL_API_KEY")
     receiver_email = os.getenv("EMAIL")
@@ -34,6 +35,7 @@ def send_email_solution(image_path):
         email_message["To"] = receiver_email
         gmail.send_message( email_message)
         gmail.quit()
+    print('email sent')
 
 def send_email(image_path):
     sender_email = os.getenv("EMAIL")
