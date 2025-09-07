@@ -1,3 +1,6 @@
 .idea
 .venv
 .env
+images/*.png
+.continue
+sent/*.png
